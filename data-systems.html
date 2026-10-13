@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From Spreadsheets to a System | INF1781</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main><div class="wrap">
+<div class="breadcrumb"><a href="index.html">Start Here</a> / <a href="data.html">Your Data</a> / From Spreadsheets to a System</div>
+<h1>From Spreadsheets to a System</h1>
+<p class="lead">A shared database gives both branches one trustworthy set of records instead of clashing Excel files.</p>
+<div id="subnav"></div>
+<p class="jump">On this page: <a href="#why">Why this matters</a> | <a href="#ideas">Key ideas</a> | <a href="#store">In our store</a> | <a href="#sa">SA example</a> | <a href="#tradeoffs">Trade-offs</a> | <a href="#monday">On Monday</a> | <a href="#sources">Sources</a></p>
+<section class="section" id="why">
+<h2>Why this matters to you</h2>
+<ul>
+<li>Two people in one Excel file means overwritten rows and versions out of sync.</li>
+<li>Nobody knows which stock figure is real.</li>
+<li>A database gives a single source of truth both branches see live.</li>
+</ul>
+</section>
+<section class="section" id="ideas">
+<h2>Key ideas in plain English</h2>
+<ul>
+<li><b>Spreadsheet vs database:</b> a database enforces rules, so an invalid sale cannot be saved.</li>
+<li><b>ACID:</b> a sale and its stock drop happen together or not at all (Laudon and Laudon, 2022).</li>
+<li><b>Master data:</b> one Product Master and one Customer Master.</li>
+<li><b>Access control (RBAC):</b> cashiers sell, only the owner changes cost prices.</li>
+<li><b>3-2-1 backups:</b> 3 copies, 2 media types, 1 off-site.</li>
+</ul>
+</section>
+<section class="section" id="store">
+<h2>What it looks like in our store</h2>
+<ul>
+<li><b>Today:</b> Stock_Master_2026.xlsx locks, so a second file appears and the two disagree by closing.</li>
+<li><b>With a system:</b> selling 10 lengths of timber updates the balance from 14 to 4 instantly.</li>
+<li>The other branch sees it is below reorder and approves a transfer on the spot.</li>
+</ul>
+</section>
+<section class="section" id="sa">
+<h2>A real South African example</h2>
+<ul>
+<li>Small trade businesses on unlinked spreadsheets lose 3% to 5% of gross revenue to admin errors and phantom stock-outs (GIBS case studies).</li>
+<li>Entry-level retail software cuts stock reconciliation time by over 70% (Sage, n.d.; Xero, n.d.a).</li>
+</ul>
+</section>
+<section class="section" id="tradeoffs">
+<h2>Trade-offs and risks</h2>
+<ul>
+<li>Transition needs a few days to clean data and train staff.</li>
+<li>Cloud software is a monthly subscription, not free.</li>
+<li>Internet dependence needs offline-capable POS and LTE failover.</li>
+</ul>
+</section>
+<section class="section" id="monday">
+<h2>What to do on Monday: 5-step migration</h2>
+<ol>
+<li>Audit and freeze all active spreadsheets.</li>
+<li>Build one Product Master: SKU, Description, Category, Unit Cost, Selling Price, Reorder Level.</li>
+<li>Do a weekend physical count for verified opening balances.</li>
+<li>Set user roles and permissions.</li>
+<li>Automate a nightly cloud backup.</li>
+</ol>
+</section>
+<section class="section" id="sources">
+<h2>Sources for this page</h2>
+<p>Laudon and Laudon (2022); Sage (n.d.); Xero (n.d.a). Full list on the <a href="sources.html">Sources</a> page.</p>
+</section>
+
+<div id="next-prev"></div>
+</div></main>
+<script src="js/nav.js"></script>
+</body>
+</html>

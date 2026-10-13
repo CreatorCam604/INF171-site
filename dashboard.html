@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retail Dashboard and Visualisation | INF1781</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main><div class="wrap">
+<div class="breadcrumb"><a href="index.html">Start Here</a> / <a href="data.html">Your Data</a> / Retail Dashboard</div>
+<h1>Retail Dashboard and Visualisation</h1>
+<p><span class="badge">Sample data, not real figures</span></p>
+<p class="lead">One screen that turns slips and spreadsheet rows into decisions in minutes. Try the branch filter.</p>
+<div id="subnav"></div>
+<section class="section" id="ideas">
+<h2>What the numbers mean</h2>
+<ul>
+<li><b>Gross margin:</b> (sales minus cost of sales) / sales (Few, 2013).</li>
+<li><b>Stock turnover:</b> cost of sales / average inventory value (Stats SA, 2022).</li>
+<li><b>Dead stock:</b> capital in items with zero sales for over 90 days.</li>
+<li><b>Branch discrepancies:</b> one branch below reorder while the other has surplus.</li>
+</ul>
+</section>
+<div class="filter" role="group" aria-label="Branch filter">
+<button data-branch="both" class="on">Both branches</button>
+<button data-branch="vdbp">Vanderbijlpark</button>
+<button data-branch="ver">Vereeniging</button>
+</div>
+<div class="kpis">
+<div class="kpi"><div class="label">Monthly turnover</div><div class="value" id="k-turnover">-</div><div class="sub" id="k-turnover-sub"></div></div>
+<div class="kpi"><div class="label">Gross profit margin</div><div class="value" id="k-margin">-</div><div class="sub" id="k-margin-sub"></div></div>
+<div class="kpi"><div class="label">Dead stock value (over 90 days)</div><div class="value" id="k-dead">-</div><div class="sub" id="k-dead-sub"></div></div>
+<div class="kpi"><div class="label">Inter-branch transfer candidates</div><div class="value" id="k-transfer">-</div><div class="sub">Low at one branch, extra at the other</div></div>
+</div>
+<p class="explain">Sample month: turnover about R428,500 (target R400,000), margin about 28.6%, dead stock about R64,200 across 6 lines, and 14 transfer candidates. Every figure is calculated live from the mock data.</p>
+<div class="charts">
+<div class="chart-box wide"><h3>Stock out of balance between branches</h3><div class="tall"><canvas id="c-branch"></canvas></div><p class="explain">8 bags of cement here, 142 at the other branch. Transfer by bakkie instead of a fresh supplier order.</p></div>
+<div class="chart-box"><h3>Weekly revenue vs margin</h3><canvas id="c-weekly"></canvas><p class="explain">Revenue up from about R92k to R108k with margin steady near 28.6%: real profit, not quiet discounting.</p></div>
+<div class="chart-box"><h3>Cash tied up in dead stock</h3><canvas id="c-dead"></canvas><p class="explain">Dead capital by category, so markdowns target the worst first.</p></div>
+</div>
+<h2>Stock list and actions</h2>
+<p class="explain">Red: dead stock to clear. Amber: transfer or reorder. Green: adequate. Actions are suggestions, not automatic.</p>
+<div class="table-scroll"><table id="t-stock"><thead><tr><th>SKU</th><th>Product</th><th>Category</th><th>Vanderbijlpark</th><th>Vereeniging</th><th>Margin</th><th>Action</th></tr></thead><tbody></tbody></table></div>
+<section class="section" id="sa">
+<h2>A real South African example</h2>
+<ul>
+<li>Trade enterprises average a 21.7% to 23.6% gross margin, about 6.0% net before tax (Stats SA, 2022).</li>
+<li>Hardware benchmarks 25% to 30%, so the store's 28.6% target is in line.</li>
+</ul>
+</section>
+<section class="section" id="tradeoffs">
+<h2>Trade-offs and risks</h2>
+<ul>
+<li>Too many charts and colours hide the warnings that matter (Few, 2013).</li>
+<li>Wrong codes at the till make every figure wrong.</li>
+<li>Watching only revenue can hide a shrinking margin.</li>
+</ul>
+</section>
+<section class="section" id="monday">
+<h2>What to do on Monday</h2>
+<ul class="checklist">
+<li>Review the four cards every Monday at 07:30.</li>
+<li>Approve the flagged inter-branch transfers before ordering.</li>
+<li>Mark down anything unsold for over 90 days.</li>
+</ul>
+</section>
+<section class="section" id="sources">
+<h2>Sources for this page</h2>
+<p>Few (2013); Stats SA (2022). Full list on the <a href="sources.html">Sources</a> page.</p>
+</section>
+
+<div id="next-prev"></div>
+</div></main>
+<script src="js/nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="dashboard/data.js"></script>
+<script src="dashboard/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Paste this into the first empty column of row 2 in Junior's Stock sheet, then drag it down.
+Columns assumed: A SKU, B Description, C Category, D VDBP Stock, E VER Stock, F Unit Cost, G Selling Price,
+H Days Unsold VDBP, I Days Unsold VER, J Reorder Level, K Action. Change the letters if his order is different.
+Copy the results and paste them inside the STOCK = [ ... ]; brackets in data.js.
+
+="{ sku: """&A2&""", name: """&B2&""", category: """&C2&""", vdbp: "&D2&", ver: "&E2&", cost: "&F2&", price: "&G2&", daysUnsoldVdbp: "&H2&", daysUnsoldVer: "&I2&", reorderLevel: "&J2&", action: """&K2&""" },"

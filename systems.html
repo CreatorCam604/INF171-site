@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting Your Systems | INF1781</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main><div class="wrap">
+<div class="breadcrumb"><a href="index.html">Start Here</a> / Connecting Your Systems</div>
+<h1>Connecting Your Systems</h1>
+<p class="lead">Why the till, stock and accounting should share information, and how to connect them in steps.</p>
+<p class="jump">On this page: <a href="#why">Why this matters</a> | <a href="#ideas">Key ideas</a> | <a href="#store">In our store</a> | <a href="#flow">Before and after</a> | <a href="#sa">SA example</a> | <a href="#tradeoffs">Trade-offs</a> | <a href="#monday">On Monday</a> | <a href="#sources">Sources</a></p>
+<section class="section" id="why">
+<h2>Why this matters to you</h2>
+<ul>
+<li>Separate records mean no shared stock view and no clear daily profit.</li>
+<li>Connecting them cuts double entry and keeps both branches consistent.</li>
+</ul>
+</section>
+<section class="section" id="ideas">
+<h2>Key ideas in plain English</h2>
+<ul>
+<li><b>ERP:</b> links purchasing, stock, sales and accounting.</li>
+<li><b>CRM:</b> manages customer details and enquiries.</li>
+<li><b>SCM:</b> manages goods between suppliers, branches and customers.</li>
+<li><b>POS:</b> records sales and updates stock.</li>
+<li><b>Accounting:</b> records income, expenses and accounts.</li>
+<li><b>Integration:</b> these share information, so a sale is entered once.</li>
+</ul>
+</section>
+<section class="section" id="store">
+<h2>What it looks like in our store</h2>
+<ul>
+<li>One shared product list: unique code, standard name, price, per-branch stock.</li>
+<li>Delivery, sale, reorder alert and transfer all flow from the same records.</li>
+<li>Start small and connected, add modules in phases, not one big platform at once.</li>
+</ul>
+</section>
+<section class="section" id="flow">
+<h2>Before and after: how information moves</h2>
+<div class="flow-wrap">
+  <div class="flow">
+    <h3>Before: separate records</h3>
+    <div class="lane">
+      <div class="box">Supplier delivery</div><div class="arrow">&darr;</div>
+      <div class="box paper">Handwritten order book</div><div class="arrow">&darr;</div>
+      <div class="box paper">Excel stock sheet (each branch its own)</div>
+    </div>
+    <div class="gap"><span>nothing connects these</span></div>
+    <div class="lane">
+      <div class="box">Customer sale</div><div class="arrow">&darr;</div>
+      <div class="box paper">Basic till</div><div class="arrow">&darr;</div>
+      <div class="box paper">Paper slips</div><div class="arrow">&darr;</div>
+      <div class="box paper">Accountant, once a month</div>
+    </div>
+    <p class="note">Branches kept apart, re-entered by hand: mistakes, stock-outs and delays.</p>
+  </div>
+  <div class="flow">
+    <h3>After: connected systems</h3>
+    <div class="lane">
+      <div class="box">Supplier delivery</div><div class="arrow">&darr;</div>
+      <div class="box sys">Shared inventory system (both branches)</div><div class="arrow">&uarr;&darr;</div>
+      <div class="box">Customer sale</div><div class="arrow">&darr;</div>
+      <div class="box sys">POS updates stock automatically</div><div class="arrow">&darr;</div>
+      <div class="box sys">Accounting records update</div><div class="arrow">&darr;</div>
+      <div class="box sys">Owner dashboard: sales and stock, both branches</div><div class="arrow">&darr;</div>
+      <div class="box goal">Better ordering and transfer decisions</div>
+    </div>
+    <p class="note">Both branches work from live, shared information.</p>
+  </div>
+</div>
+</section>
+<section class="section" id="sa">
+<h2>A real South African example</h2>
+<ul>
+<li>Options to compare: Sage, Xero, Odoo and Shopify POS (vendor sites).</li>
+<li>No need for one big suite: accounting plus a connected inventory or POS app can be enough.</li>
+<li>Check pricing, local support and features before choosing.</li>
+</ul>
+</section>
+<section class="section" id="tradeoffs">
+<h2>Trade-offs and risks</h2>
+<ul>
+<li>Data silos and duplicate records.</li>
+<li>APIs vs manual exports, and legacy data to clean first.</li>
+<li>Vendor lock-in, cost and staff skills.</li>
+<li>Load-shedding and security (POPIA applies).</li>
+</ul>
+</section>
+<section class="section" id="monday">
+<h2>What to do on Monday</h2>
+<ul class="checklist">
+<li>List every system used at both branches.</li>
+<li>Name the three biggest problems from disconnected data.</li>
+<li>Build one standard product list.</li>
+<li>Compare two solutions and test at one branch first.</li>
+</ul>
+</section>
+<section class="section" id="sources">
+<h2>Sources for this page</h2>
+<p>Odoo (n.d.); Sage (n.d.); Shopify (n.d.); Xero (n.d.a; n.d.b). Full list on the <a href="sources.html">Sources</a> page.</p>
+</section>
+
+<div id="next-prev"></div>
+</div></main>
+<script src="js/nav.js"></script>
+</body>
+</html>
